@@ -50,12 +50,11 @@ Claude 구독 사용량(5시간 세션 · 주간)을 iOS·안드로이드 홈 �
 
 ## 현재 상태
 - iOS: iPad Air 11(2025)에서 예시 데이터로 테스트 완료, 레이아웃 확정.
-- 안드로이드: 코드 작성 완료, 아직 빌드·실기기 테스트 안 함.
-- 서버: 코드 작성 완료, 아직 배포 안 함.
+- 안드로이드: Actions 빌드 통과(APK 생성), 실기기 테스트는 아직.
+- 서버: 코드 작성 완료, `server/wrangler.jsonc` 추가(Worker 이름 `claude-usage`). 아직 배포 안 함.
 
 ## 다음 단계
-1. 안드로이드 빌드가 통과할 때까지 수정 (Actions 로그 확인).
-2. Cloudflare에 Worker 배포 (가능하면 GitHub 연동 자동 배포).
-3. 토큰 확인: PC에서 `claude setup-token`으로 받은 토큰이 `/raw`에서 동작하는지 검증.
+1. Cloudflare에 Worker 배포: 대시보드에서 GitHub 저장소 연결, 루트 디렉터리 `server`.
+2. 토큰 확인: PC에서 `claude setup-token`으로 받은 토큰이 `/raw`에서 동작하는지 검증.
    안 되면 `~/.claude/.credentials.json` 토큰 + 자동 갱신 기능 검토.
-4. 동작 확인 후 두 위젯의 `USE_MOCK`을 끄고 `SERVER_URL` 연결.
+3. 동작 확인 후 두 위젯의 `USE_MOCK`을 끄고 `SERVER_URL` 연결.
