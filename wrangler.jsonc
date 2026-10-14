@@ -1,0 +1,9 @@
+// Cloudflare Worker 설정 (GitHub 연동 자동 배포용)
+// 저장소 루트에 둬서 Cloudflare의 Root directory 설정 없이도 찾을 수 있게 함
+// 대시보드의 Worker 이름이 아래 name과 같아야 함
+{
+  "name": "claude-usage",
+  "main": "server/worker.js",
+  "compatibility_date": "2025-09-01",
+  "workers_dev": true
+}

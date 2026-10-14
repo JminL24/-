@@ -1,8 +1,0 @@
-// Cloudflare Worker 설정 (GitHub 연동 자동 배포용)
-// 대시보드에서 Worker 이름을 아래 name과 똑같이 만들어야 함
-{
-  "name": "claude-usage",
-  "main": "worker.js",
-  "compatibility_date": "2025-09-01",
-  "workers_dev": true
-}
